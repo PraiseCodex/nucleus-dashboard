@@ -1,0 +1,20 @@
+{
+  "projects": 3,
+  "requests": 3000,
+  "users": 1,
+  "storage": "128GB",
+  "api-call": [120, 150, 180, 210, 250, 300],
+  "profit-growth": 25,
+  "metrics": [
+    {"name": "Re-used APIs", "percentage": 36},
+    {"name": "Webhooks", "percentage": 38},
+    {"name": "API Calls", "percentage": 25}
+  ],
+  "plans": [
+    {"name": "Basic", "priceMonthly": 10, "priceYearly": 100},
+    {"name": "Pro", "priceMonthly": 25, "priceYearly": 250},
+    {"name": "Enterprise", "priceMonthly": 50, "priceYearly": 500}
+  ]
+
+
+}
