@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import {motion} from "framer-motion"
 
 import {
   File,
@@ -64,7 +65,11 @@ export function AppSidebar() {
   const pathName = usePathname();
 
   return (
-    <div className="min-h-screen">
+    <motion.div 
+      initial={{opacity: 0, y: -50}}
+      animate={{opacity: 1, y:0}}
+      transition={{duration: 0.5}}
+      className="min-h-screen">
       <Sidebar side="left" variant="sidebar" collapsible="none">
         <SidebarHeader className="p-2">
           <img src="/assets/images/Group 27.svg" alt="" />
@@ -137,6 +142,6 @@ export function AppSidebar() {
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
-    </div>
+    </motion.div>
   );
 }
