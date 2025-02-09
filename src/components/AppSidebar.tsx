@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import {motion} from "framer-motion"
+import { useEffect, useState } from "react";
 
 import {
   File,
@@ -63,12 +64,17 @@ const settings = [
 
 export function AppSidebar() {
   const pathName = usePathname();
+  const [hasAnimated, setHasAnimated] = useState<boolean>(false);
+
+  useEffect(()=>{
+    setHasAnimated(true); // Set to true after first render
+  }, [])
 
   return (
     <motion.div 
-      initial={{opacity: 0, y: -50}}
+      initial={hasAnimated ? {} : {opacity: 0, y: -50} }
       animate={{opacity: 1, y:0}}
-      transition={{duration: 0.5}}
+      transition={{duration: 0.8}}
       className="min-h-screen">
       <Sidebar side="left" variant="sidebar" collapsible="none">
         <SidebarHeader className="p-2">
