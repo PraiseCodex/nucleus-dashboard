@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import  {AppSidebar}  from "@/custom-components/AppSidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
+import  {AppSidebar}  from "@/components/AppSidebar"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,13 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-start`}
       >
         <SidebarProvider>
           <AppSidebar />
-        <SidebarTrigger />
         </SidebarProvider>
-        <main>{children}</main>
+        <main className="bg-[#F8F9FC] w-full h-full ml-[300px]">{children}</main>
       </body>
     </html>
   );
