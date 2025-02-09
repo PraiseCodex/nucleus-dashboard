@@ -1,10 +1,9 @@
 'use client'
 
-import Graph from "@/components/Graph"
-
 import React from 'react'
 import {motion} from "framer-motion"
 import DashboardHeader from "@/components/DashboardHeader"
+import Details from '@/components/Details'
 
 const page = () => {
   return (
@@ -14,21 +13,14 @@ const page = () => {
       transition={{duration: 0.3}}
       className='w-full h-full'>
 
-
       <DashboardHeader />
-      <div>
-        {/* <div>
-          some details
-          api call in last 6 hrs
-          <div>
-            p and l
-            current plan
-          </div>
+      <div className="grid grid-cols-2 p-4">
+        <div className='flex flex-col'>
+          <Details />
         </div>
         <div>
-          activity
-          integration
-        </div> */}
+
+        </div>
       </div>
 
       {/* <Graph /> */}
