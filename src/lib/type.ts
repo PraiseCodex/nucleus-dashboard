@@ -19,4 +19,5 @@ export interface ApiData {
   profitGrowth: number;
   metrics: Metric[];
   plans: Plan[];
+  [key: string]: number | string | number[] | object;
 }

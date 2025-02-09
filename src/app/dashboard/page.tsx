@@ -7,14 +7,11 @@ import Details from '@/components/Details'
 
 const page = () => {
   return (
-    <motion.div 
-      initial={{y: -90}}
-      animate={{y:0}}
-      transition={{duration: 0.3}}
+    <div 
       className='w-full h-full'>
 
       <DashboardHeader />
-      <div className="grid grid-cols-2 p-4">
+      <div className="p-4">
         <div className='flex flex-col'>
           <Details />
         </div>
@@ -25,7 +22,7 @@ const page = () => {
 
       {/* <Graph /> */}
 
-    </motion.div>
+    </div>
   )
 }
 
