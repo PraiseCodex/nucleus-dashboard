@@ -1,7 +1,9 @@
 "use client "
 
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { fetchData } from '@/lib/api'
+import { ApiData } from '@/lib/type'
 
 import { 
   FileText,
@@ -11,34 +13,33 @@ import {
 } from 'lucide-react'
 
 export default function Details() {
+  const [data, setData] = useState<ApiData | null>(null);
+
+  useEffect(()=>{
+    const getData = async() => {
+      try {
+        const result = await fetchData();
+        setData(result);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getData();
+
+  }, [])
+
+  const { projects } = data || {};
+
+
+ 
+
   return (
     <div className='bg-white w-full flex justify-between p-2'>
      <div className='flex'>
         <FileText />
         <p className='flex flex-col'>
           <span>Projects</span>
-          <span>3</span>
-        </p>
-     </div>
-     <div>
-        <SortAscIcon />
-        <p>
-          <span>Requests</span>
-          <span>3456</span>
-        </p>
-     </div>
-     <div>
-        <Users />
-        <p>
-          <span>Users</span>
-          <span>3</span>
-        </p>
-     </div>
-     <div>
-        <PieChart />
-        <p>
-          <span>Storage</span>
-          <span>128/500 GB</span>
+          <span>{projects}</span>
         </p>
      </div>
     </div>

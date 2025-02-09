@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 import { useEffect, useState } from "react";
 
 import {
-  File,
+  FileText,
   Wallet,
   Settings,
   PhoneCall,
@@ -35,7 +35,7 @@ const items = [
   {
     title: "Billings",
     url: "/dashboard",
-    icon: File,
+    icon: FileText,
   },
   {
     title: "Invoices",
