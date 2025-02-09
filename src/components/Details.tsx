@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "@/lib/api";
 import { ApiData } from "@/lib/type";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 import { FileText, Users, PieChart, SortAscIcon } from "lucide-react";
 
@@ -50,7 +51,12 @@ export default function Details() {
 
 
   return (
-    <div className="bg-white w-full flex justify-between p-8 gap-4 rounded-xl shadow-lg">
+    <motion.div 
+      className="bg-white w-full flex justify-between p-8 gap-4 rounded-xl shadow-lg"
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 0.5 }}
+    >
       {items.map(({ title, key, icon: Icon, color }) => {
         let value = data ? data[key] : "Loading...";
 
@@ -60,7 +66,13 @@ export default function Details() {
         }
 
         return (
-          <div key={key} className="flex items-center gap-3">
+          <motion.div 
+            key={key} 
+            className="flex items-center gap-3"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: items.indexOf({ title, key, icon: Icon, color }) * 0.1 }}
+          >
             <div className="bg-[#FFF2E9] p-3 rounded-xl">
               <Icon style={{color: color}}></Icon>
             </div>
@@ -68,9 +80,9 @@ export default function Details() {
               <span className="text-[#92959E] font-bold">{title}</span>
               <span>{value}</span>
             </p>
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

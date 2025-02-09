@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import {
@@ -62,35 +62,41 @@ const settings = [
   },
 ];
 
+const menuItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.1, duration: 0.4 },
+  }),
+};
+
 export function AppSidebar() {
   const pathName = usePathname();
-  const [hasAnimated, setHasAnimated] = useState<boolean>(false);
-
-  useEffect(()=>{
-    setHasAnimated(true); // Set to true after first render
-  }, [])
 
   return (
-    <motion.div 
-      initial={hasAnimated ? {} : {opacity: 0, y: -50} }
-      animate={{opacity: 1, y:0}}
-      transition={{duration: 0.8}}
-      className="min-h-screen">
+    <div>
       <Sidebar side="left" variant="sidebar" collapsible="none">
-        <SidebarHeader className="p-2">
-          <img src="/assets/images/Group 27.svg" alt="" />
-          <span className="text-[#551FFF] text-[16.89px]">Nucleus</span>
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupContent>
-              <SidebarMenu className="mt-[3rem] gap-6">
-                {items.map((item) => {
-                  const isActive = pathName === item.url;
+      <SidebarHeader className="p-2">
+        <img src="/assets/images/Group 27.svg" alt="" />
+        <span className="text-[#551FFF] text-[16.89px]">Nucleus</span>
+      </SidebarHeader>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu className="mt-[3rem] gap-6">
+              {items.map((item, i) => {
+                const isActive = pathName === item.url;
 
-                  return (
+                return (
+                  <motion.div
+                    key={item.title}
+                    custom={i}
+                    initial="hidden"
+                    animate="visible"
+                    variants={menuItemVariants}
+                  >
                     <SidebarMenuItem
-                      key={item.title}
                       className={` rounded-3xl ${
                         isActive
                           ? "bg-[#F3F0FF] text-[#551FFF]"
@@ -108,23 +114,30 @@ export function AppSidebar() {
                         </a>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
-                  );
-                })}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-          <div className="px-2 text-[#D0D2DA]">
-            <hr />
-          </div>
-          <SidebarGroup>
-            <SidebarGroupContent>
-              <SidebarMenu className=" gap-6">
-                {settings.map((setting) => {
-                  const isActive = pathName === setting.url;
+                  </motion.div>
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <div className="px-2 text-[#D0D2DA]">
+          <hr />
+        </div>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu className=" gap-6">
+              {settings.map((setting, i) => {
+                const isActive = pathName === setting.url;
 
-                  return (
+                return (
+                  <motion.div
+                    key={setting.title}
+                    custom={i + items.length} // Offset index to avoid delay conflict
+                    initial="hidden"
+                    animate="visible"
+                    variants={menuItemVariants}
+                  >
                     <SidebarMenuItem
-                      key={setting.title}
                       className={` rounded-3xl ${
                         isActive
                           ? "bg-[#F3F0FF] text-[#551FFF]"
@@ -141,13 +154,15 @@ export function AppSidebar() {
                         </a>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
-                  );
-                })}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </SidebarContent>
-      </Sidebar>
-    </motion.div>
+                  </motion.div>
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+    </div>
+    
   );
 }
