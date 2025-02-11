@@ -1,15 +1,14 @@
 "use client";
 
 import React from "react";
-
-import { MoreVerticalIcon } from "lucide-react";
+import Dropdown from "./Dropdown";
 
 export default function Activity() {
   return (
     <div className="flex flex-col gap-4 bg-white rounded-[0.7rem] p-4">
       <div className="flex justify-between items-center">
         <h3 className="font-bold text-xl">Activity</h3>
-        <MoreVerticalIcon />
+        <Dropdown />
       </div>
       <div className="flex gap-2 ">
         <div className="flex gap-2">
