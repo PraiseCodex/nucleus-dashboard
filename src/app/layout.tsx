@@ -32,7 +32,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
         </SidebarProvider>
-        <main className="w-full h-full ml-[300px]">{children}</main>
+        <main className="bg-[#F8F9FC] w-full h-full ml-[300px]">{children}</main>
       </body>
     </html>
   );
