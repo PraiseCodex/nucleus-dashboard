@@ -6,6 +6,8 @@ import Details from '@/components/Details'
 import SkeletonUi from '@/components/SkeletonUi'
 import ApiCall from '@/components/ApiCall'
 import Activity from '@/components/Activity'
+import ProfitGrowth from '@/components/ProfitGrowth'
+import CurrentPlan from '@/components/CurrentPlan'
 
 
 const page = () => {
@@ -18,6 +20,10 @@ const page = () => {
         <div className='flex flex-col gap-4'>
           <Details />
           <ApiCall />
+          <div className='flex gap-4 w-full px-4'>
+            <ProfitGrowth />
+            <CurrentPlan />
+          </div>
         </div>
         <div>
           <Activity />

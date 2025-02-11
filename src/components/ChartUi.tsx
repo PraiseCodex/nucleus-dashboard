@@ -47,7 +47,7 @@ export function ChartUi() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className="h-[15rem]  w-[95%]">
           <AreaChart
             accessibilityLayer
             data={chartData}
