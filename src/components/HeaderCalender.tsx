@@ -34,7 +34,7 @@ export default function HeaderCalender() {
           <ArrowDown />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0">
+      <PopoverContent className="w-auto p-0 bg-[#F4F5F7] rounded-xl">
         <Calendar
           mode="single"
           selected={date}

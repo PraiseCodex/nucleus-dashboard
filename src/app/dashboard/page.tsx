@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import {motion} from "framer-motion"
 import DashboardHeader from "@/components/DashboardHeader"
 import Details from '@/components/Details'
+
 
 const page = () => {
   return (
@@ -19,9 +19,6 @@ const page = () => {
 
         </div>
       </div>
-
-      {/* <Graph /> */}
-
     </div>
   )
 }
