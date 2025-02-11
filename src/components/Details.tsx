@@ -30,7 +30,7 @@ export default function Details() {
 
     setTimeout(() => {
       getData();
-    }, 3000);
+    }, 1000);
   }, []);
 
   return (
@@ -45,7 +45,10 @@ export default function Details() {
           // Check if data is still loading
           if (!data) {
             return (
-              <div key={key}>Loading</div>
+              
+                <SkeletonUi key={title}/>
+
+              // <div key={title}>Loading...</div>
             );
           }
     

@@ -3,6 +3,7 @@
 import React from 'react'
 import DashboardHeader from "@/components/DashboardHeader"
 import Details from '@/components/Details'
+import SkeletonUi from '@/components/SkeletonUi'
 
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       className='w-full h-full'>
 
       <DashboardHeader />
+
       <div className="p-4">
         <div className='flex flex-col'>
           <Details />
