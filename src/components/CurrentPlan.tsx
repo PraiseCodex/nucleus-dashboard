@@ -15,8 +15,8 @@ export default function CurrentPlan() {
     className="bg-white p-3 flex flex-col gap-6 shadow-md rounded-xl">
       <div className="flex w-full items-center justify-between">
         <div className="flex flex-col gap-1">
-          <h3>Current Plan</h3>
-          <p>Information and usages of your current plan</p>
+          <h3 className="font-bold text-2xl">Current Plan</h3>
+          <p className="text-[#92959E]">Information and usages of your current plan</p>
         </div>
         <SlidersHorizontal />
       </div>
