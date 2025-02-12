@@ -20,7 +20,7 @@ const page = () => {
         <div className='flex flex-col gap-4'>
           <Details />
           <ApiCall />
-          <div className='flex gap-4 w-full px-4'>
+          <div className='grid grid-cols-2 gap-4 w-full'>
             <ProfitGrowth />
             <CurrentPlan />
           </div>
