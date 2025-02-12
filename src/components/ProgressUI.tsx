@@ -13,7 +13,7 @@ export default function ProgressUI() {
   }, []);
 
   return (
-    <div>
+    <div className="w-full flex flex-col gap-4">
       <div>
         <p>Plans</p>
         <Progress value={progress} />
