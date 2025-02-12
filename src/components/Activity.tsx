@@ -19,7 +19,7 @@ export default function Activity() {
         <h3 className="font-bold text-xl">Activity</h3>
         <Dropdown />
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-6">
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
@@ -35,73 +35,109 @@ export default function Activity() {
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
         <div className="flex gap-2">
           <Skeleton className="min-w-12 h-12 rounded-full"/>
           <div className="flex flex-col gap-2">
-            <h4 className="font-bold">James Anderson</h4>
-            <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
-              realiability of a proper API. It was just a webhook away from
-              application."
-            </p>
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <Skeleton className="min-w-12 h-12 rounded-full"/>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="h-6 w-[6rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[25rem]"/>
+            <Skeleton className="h-6 w-[5rem]"/>
           </div>
         </div>
       </div>
