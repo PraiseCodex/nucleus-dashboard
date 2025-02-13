@@ -20,9 +20,9 @@ export default function ProfitGrowth() {
         <p className="text-[#92959E]">
           Total profit of Growth is 25%
         </p>
-        
+
       </div>
-      <div className="flex items-center justify-between">
+      <div className="grid grid-cols-[1fr_2fr]">
         <ul>
           <li>Re-Used APIs <br /> 36%</li>
           <li>Webhooks <br /> 38%</li>

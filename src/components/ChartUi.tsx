@@ -41,13 +41,13 @@ export function ChartUi() {
   return (
     <Card>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[20rem]  w-[95%]">
+        <ChartContainer config={chartConfig} className="h-[20rem]  w-[100%]">
           <AreaChart
             accessibilityLayer
             data={chartData}
             margin={{
               left: -20,
-              right: 12,
+              right: 15,
             }}
           >
             <CartesianGrid vertical={false} />

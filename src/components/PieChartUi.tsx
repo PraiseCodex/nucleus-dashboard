@@ -54,7 +54,7 @@ const chartConfig = {
 
 export default function PieChartUi() {
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col w-[15rem]">
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
