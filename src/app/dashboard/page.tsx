@@ -8,6 +8,7 @@ import ApiCall from '@/components/ApiCall'
 import Activity from '@/components/Activity'
 import ProfitGrowth from '@/components/ProfitGrowth'
 import CurrentPlan from '@/components/CurrentPlan'
+import Interaction from '@/components/Interaction'
 
 
 const page = () => {
@@ -25,8 +26,9 @@ const page = () => {
             <CurrentPlan />
           </div>
         </div>
-        <div>
+        <div className='flex flex-col gap-8'>
           <Activity />
+          <Interaction />
         </div>
       </div>
     </div>
