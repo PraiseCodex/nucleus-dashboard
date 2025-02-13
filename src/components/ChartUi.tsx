@@ -18,12 +18,12 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { time: "10:30 AM", desktop: 3000},
+  { time: "11:30 AM", desktop: 6000},
+  { time: "12:30 AM", desktop: 3500},
+  { time: "1:30 PM", desktop: 7000},
+  { time: "2:30 PM", desktop: 7500},
+  { time: "3: 30 PM", desktop: 4000},
 ]
 
 const chartConfig = {
@@ -40,14 +40,8 @@ const chartConfig = {
 export function ChartUi() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Area Chart - Axes</CardTitle>
-        <CardDescription>
-          Showing total visitors for the last 6 months
-        </CardDescription>
-      </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[15rem]  w-[95%]">
+        <ChartContainer config={chartConfig} className="h-[20rem]  w-[95%]">
           <AreaChart
             accessibilityLayer
             data={chartData}
@@ -58,27 +52,19 @@ export function ChartUi() {
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="month"
-              tickLine={false}
-              axisLine={false}
+              dataKey="time"
+              tickLine={true}
+              axisLine={true}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
+              
             />
             <YAxis
-              tickLine={false}
-              axisLine={false}
+              tickLine={true}
+              axisLine={true}
               tickMargin={8}
               tickCount={3}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Area
-              dataKey="mobile"
-              type="natural"
-              fill="var(--color-mobile)"
-              fillOpacity={0.4}
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
             <Area
               dataKey="desktop"
               type="natural"
@@ -90,18 +76,6 @@ export function ChartUi() {
           </AreaChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter>
-        <div className="flex w-full items-start gap-2 text-sm">
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-            </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
-              January - June 2024
-            </div>
-          </div>
-        </div>
-      </CardFooter>
     </Card>
   )
 }
