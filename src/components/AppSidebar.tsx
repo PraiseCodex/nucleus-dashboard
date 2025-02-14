@@ -75,7 +75,7 @@ export function AppSidebar() {
 
   return (
     <div>
-      <Sidebar side="left" variant="sidebar" collapsible="offcanvas" className="border-none">
+      <Sidebar side="left" variant="sidebar" collapsible="none" className="border-none">
       <SidebarHeader className="p-2">
         <Image src="/assets/images/Logo.svg" alt="Logo"/>
         <span className="text-[#551FFF] text-[16.89px]">Nucleus</span>
