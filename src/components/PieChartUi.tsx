@@ -1,16 +1,12 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart, Sector } from "recharts"
+
+import { Pie, PieChart, Sector } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   ChartConfig,
@@ -19,36 +15,23 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  { profitGrowth: "APIs", percentage: 3600, fill: "var(--color-chrome)" },
+  { profitGrowth: "Webhooks", percentage: 3800, fill: "var(--color-safari)" },
+  { profitGrowth: "Calls", percentage: 2500, fill: "var(--color-firefox)" },
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
   chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
+    label: "APIs",
+    color: "#FD2254",
   },
   safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
+    label: "Webhooks",
+    color: "#00B7FE",
   },
   firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
+    label: "Calls",
+    color: "#D0D2DA",
   },
 } satisfies ChartConfig
 
@@ -67,8 +50,8 @@ export default function PieChartUi() {
             />
             <Pie
               data={chartData}
-              dataKey="visitors"
-              nameKey="browser"
+              dataKey="percentage"
+              nameKey="profitGrowth"
               innerRadius={60}
               strokeWidth={5}
               activeIndex={0}

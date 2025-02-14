@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import {
   FileText,
@@ -18,7 +18,6 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -78,7 +77,7 @@ export function AppSidebar() {
     <div>
       <Sidebar side="left" variant="sidebar" collapsible="offcanvas" className="border-none">
       <SidebarHeader className="p-2">
-        <img src="/assets/images/Group 27.svg" alt="" />
+        <Image src="/assets/Logo.svg" alt="Logo"/>
         <span className="text-[#551FFF] text-[16.89px]">Nucleus</span>
       </SidebarHeader>
       <SidebarContent>

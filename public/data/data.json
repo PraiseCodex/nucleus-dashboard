@@ -1,7 +1,7 @@
 {
-  "projects": 3,
+  "projects": 20,
   "requests": 34,
-  "users": 3,
+  "users": 20,
   "storage": "128",
   "maxStorage" : "500",
   "apiCall": [120, 150, 180, 210, 250, 300],

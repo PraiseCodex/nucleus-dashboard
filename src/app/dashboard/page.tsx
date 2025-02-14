@@ -3,7 +3,6 @@
 import React from 'react'
 import DashboardHeader from "@/components/DashboardHeader"
 import Details from '@/components/Details'
-import SkeletonUi from '@/components/SkeletonUi'
 import ApiCall from '@/components/ApiCall'
 import Activity from '@/components/Activity'
 import ProfitGrowth from '@/components/ProfitGrowth'

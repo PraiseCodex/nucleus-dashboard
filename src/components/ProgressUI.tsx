@@ -6,7 +6,6 @@ import { fetchData } from "@/lib/api";
 
 
 export default function ProgressUI() {
-  const [data, setData] = useState<ApiData | null>(null);
 
   const [progress, setProgress] = useState([
     { label: "Projects", value: 0, color: "bg-blue-500" },

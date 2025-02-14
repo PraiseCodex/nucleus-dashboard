@@ -26,10 +26,10 @@ export default function Activity() {
           <div className="flex flex-col gap-2">
             <h4 className="font-bold">James Anderson</h4>
             <p className="text-[]">
-              Called "Books-Api" with the javascript webhook and commented.
-              "Books-API was readily available with proper documentation and
+              &quot;Called Books-Api&quot; with the javascript webhook and commented.
+              &quot;Books-API was readily available with proper documentation and
               realiability of a proper API. It was just a webhook away from
-              application."
+              application.&quot;
             </p>
           </div>
         </div>
