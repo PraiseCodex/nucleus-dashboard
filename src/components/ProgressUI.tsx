@@ -18,9 +18,9 @@ export default function ProgressUI() {
       try {
         const result: ApiData = await fetchData(); 
         const updatedProgress = [
-          { label: "Projects", value: result.projects || 0, color: "text-blue-500" },
-          { label: "Users", value: result.users || 0, color: "text-green-500" },
-          { label: "Request/day", value: result.requests || 0, color: "text-red-500" },
+          { label: "Projects", value: result.projects || 0, color: "bg-blue-500" },
+          { label: "Users", value: result.users || 0, color: "bg-green-500" },
+          { label: "Request/day", value: result.requests || 0, color: "bg-red-500" },
         ];
         setProgress(updatedProgress);
       } catch (error) {
@@ -39,7 +39,7 @@ export default function ProgressUI() {
           <p>{item.label}</p>
           <Progress
             value={item.value}
-            className={`h-2 ${item.color}`}
+            className={item.color}
           />
         </div>
       ))}
