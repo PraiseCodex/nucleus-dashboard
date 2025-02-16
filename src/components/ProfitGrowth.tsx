@@ -55,7 +55,7 @@ export default function ProfitGrowth() {
                     <span className={`min-w-3 h-3 rounded-full ${bullet_color} mr-3`}></span>
                     <span>{metric.name}</span>
                   </p>
-                  <p className="ml-5">35%</p>
+                  <p className="ml-5">{metric.percentage}%</p>
                 </div>
               )
             })}
