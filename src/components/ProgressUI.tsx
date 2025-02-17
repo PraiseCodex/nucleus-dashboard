@@ -8,9 +8,9 @@ import { fetchData } from "@/lib/api";
 export default function ProgressUI() {
 
   const [progress, setProgress] = useState([
-    { label: "Projects", value: 0, color: "bg-blue-500" },
-    { label: "Users", value: 0, color: "bg-green-500" },
-    { label: "Request/day", value: 0, color: "bg-red-500" },
+    { label: "Projects", value: 0},
+    { label: "Users", value: 0},
+    { label: "Request/day", value: 0},
   ]);
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function ProgressUI() {
       try {
         const result: ApiData = await fetchData(); 
         const updatedProgress = [
-          { label: "Projects", value: result.projects || 0, color: "bg-blue-500" },
-          { label: "Users", value: result.users || 0, color: "bg-green-500" },
-          { label: "Request/day", value: result.requests || 0, color: "bg-red-500" },
+          { label: "Projects", value: result.projects || 0},
+          { label: "Users", value: result.users || 0},
+          { label: "Request/day", value: result.requests || 0},
         ];
         setProgress(updatedProgress);
       } catch (error) {
@@ -39,7 +39,6 @@ export default function ProgressUI() {
           <p>{item.label}</p>
           <Progress
             value={item.value}
-            className={item.color}
           />
         </div>
       ))}
