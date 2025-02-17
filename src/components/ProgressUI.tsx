@@ -36,7 +36,10 @@ export default function ProgressUI() {
     <div className="w-full flex flex-col gap-4 max-w-[300px]">
       {progress.map((item, index) => (
         <div key={index} className="flex flex-col gap-2">
-          <p>{item.label}</p>
+          <p className="w-full flex items-center justify-between">
+            <span>{item.label}</span>
+            <span>{item.value}</span>
+          </p>
           <Progress
             value={item.value}
           />
