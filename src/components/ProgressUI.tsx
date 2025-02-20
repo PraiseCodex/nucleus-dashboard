@@ -33,7 +33,7 @@ export default function ProgressUI() {
   
 
   return (
-    <div className="w-full flex flex-col gap-4 max-w-[300px]">
+    <div className="w-full flex flex-col gap-4">
       {progress.map((item, index) => (
         <div key={index} className="flex flex-col gap-2">
           <p className="w-full flex items-center justify-between">
